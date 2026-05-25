@@ -96,9 +96,9 @@ cp .env.example .env
 Open `server/.env` and set your key:
 
 ```env
-OPENAI_API_KEY=sk-or-v1-your-openrouter-key-here
-OPENAI_BASE_URL=https://openrouter.ai/api/v1
-OPENAI_MODEL=gpt-4o-mini
+OPENROUTER_API_KEY=sk-or-v1-your-openrouter-key-here
+OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
+OPENROUTER_MODEL=gpt-4o-mini
 PORT=5000
 NODE_ENV=development
 FRONTEND_URL=http://localhost:5173
@@ -223,9 +223,9 @@ Dashboard metrics and monthly trend data.
    - **Build command:** `npm install`
    - **Start command:** `npm start`
 4. Add environment variables:
-   - `OPENAI_API_KEY` = your OpenRouter key
-   - `OPENAI_BASE_URL` = `https://openrouter.ai/api/v1`
-   - `OPENAI_MODEL` = `gpt-4o-mini`
+   - `OPENROUTER_API_KEY` = your OpenRouter key
+   - `OPENROUTER_BASE_URL` = `https://openrouter.ai/api/v1`
+   - `OPENROUTER_MODEL` = `gpt-4o-mini`
    - `NODE_ENV` = `production`
    - `FRONTEND_URL` = your Vercel URL
 5. Deploy

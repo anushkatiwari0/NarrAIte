@@ -10,12 +10,12 @@ let _client = null
 
 const getClient = () => {
   if (!_client) {
-    if (!process.env.OPENAI_API_KEY) {
-      throw new Error('OPENAI_API_KEY is not configured. Please add it to your .env file.')
+    if (!process.env.OPENROUTER_API_KEY) {
+      throw new Error('OPENROUTER_API_KEY is not configured. Please add it to your .env file.')
     }
     _client = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY,
-      baseURL: process.env.OPENAI_BASE_URL || 'https://openrouter.ai/api/v1',
+      apiKey: process.env.OPENROUTER_API_KEY,
+      baseURL: process.env.OPENROUTER_BASE_URL || 'https://openrouter.ai/api/v1',
       defaultHeaders: {
         'HTTP-Referer': process.env.FRONTEND_URL || 'http://localhost:5173',
         'X-Title': 'NarrAIte'
@@ -175,7 +175,7 @@ const generateNarrative = async ({
   const userPrompt = buildUserPrompt(data, audience, tone, length, format, sector)
 
   const response = await client.chat.completions.create({
-    model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
+    model: process.env.OPENROUTER_MODEL || 'gpt-4o-mini',
     messages: [
       { role: 'system', content: systemPrompt },
       { role: 'user', content: userPrompt }
