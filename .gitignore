@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.local
+.DS_Store
+*.log
+.vercel/
+server/.env
+server/uploads/
+server/data/stories.json
