@@ -82,7 +82,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/api/health', (req, res) => {
-  const hasApiKey = !!process.env.OPENAI_API_KEY
+  const hasApiKey = !!process.env.OPENROUTER_API_KEY
   res.json({
     status: 'healthy',
     uptime: Math.floor(process.uptime()) + 's',
@@ -113,7 +113,7 @@ app.listen(PORT, () => {
   console.log('║       NarrAIte Backend Server          ║')
   console.log('╚════════════════════════════════════════╝')
   console.log(`  🚀 Server running on http://localhost:${PORT}`)
-  console.log(`  🤖 AI API: ${process.env.OPENAI_API_KEY ? '✅ Configured (OpenRouter)' : '❌ Missing OPENAI_API_KEY'}`)
+  console.log(`  🤖 AI API: ${process.env.OPENROUTER_API_KEY ? '✅ Configured (OpenRouter)' : '❌ Missing OPENROUTER_API_KEY'}`)
   console.log(`  🌍 Environment: ${process.env.NODE_ENV || 'development'}`)
   console.log(`  📋 Docs: http://localhost:${PORT}/`)
   console.log('─────────────────────────────────────────\n')

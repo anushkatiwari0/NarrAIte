@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { ArrowRight, Sparkles, FileText, Users, Globe, CheckCircle2 } from 'lucide-react'
+import demoVideo from '../assets/demo.mp4'
 
 const TESTIMONIALS = [
   { name: 'Anjali Mehta', role: 'Executive Director, Asha Foundation', text: 'NarrAIte transformed how we communicate with donors. Stories that used to take a week now take seconds — and they\'re more compelling than ever.', avatar: 'AM' },
@@ -157,7 +158,7 @@ export default function Landing() {
             </div>
           </div>
           <video
-            src="/demo.mp4"
+            src={demoVideo}
             autoPlay
             loop
             muted
