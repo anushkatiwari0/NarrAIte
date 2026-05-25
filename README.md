@@ -140,7 +140,6 @@ npm run dev
 - **AI Story Generation** — Generates emotionally resonant impact narratives from raw data
 - **Audience Personalization** — Tailored tones for Donors, Investors, NGOs, Healthcare, Government, Students
 - **Multi-format Export** — Download as PDF, TXT, or Word (.doc)
-- **Batch Processing** — Generate hundreds of stories from CSV datasets
 - **Story Library** — Save, search, and manage generated narratives
 - **Analytics Dashboard** — Track generation metrics and trends
 
