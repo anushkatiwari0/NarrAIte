@@ -189,7 +189,7 @@ export default function Generator() {
       if (err.code === 'INVALID_API_KEY') {
         toast.error('AI API key is invalid. Check server/.env', { duration: 8000 })
       } else if (err.code === 'API_NOT_CONFIGURED') {
-        toast.error('Add OPENAI_API_KEY to server/.env', { duration: 8000 })
+        toast.error('Add OPENROUTER_API_KEY to server/.env', { duration: 8000 })
       } else if (err.code === 'RATE_LIMITED') {
         toast.error('Rate limit reached. Wait a moment and retry.')
       } else if (err.name === 'TypeError') {

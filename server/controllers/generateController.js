@@ -32,11 +32,11 @@ const generateStory = async (req, res) => {
   }
 
   // Check API key before attempting
-  if (!process.env.OPENAI_API_KEY) {
+  if (!process.env.OPENROUTER_API_KEY) {
     return res.status(503).json({
       success: false,
       error: 'API_NOT_CONFIGURED',
-      message: 'AI API key is not configured. Please add OPENAI_API_KEY to your server/.env file.'
+      message: 'AI API key is not configured. Please add OPENROUTER_API_KEY to your server/.env file.'
     })
   }
 
@@ -101,10 +101,10 @@ const saveStory = async (req, res) => {
 const testGenerate = async (req, res) => {
   const { testConnection } = require('../services/openaiService')
 
-  if (!process.env.OPENAI_API_KEY) {
+  if (!process.env.OPENROUTER_API_KEY) {
     return res.status(503).json({
       success: false,
-      message: 'OPENAI_API_KEY not configured'
+      message: 'OPENROUTER_API_KEY not configured'
     })
   }
 

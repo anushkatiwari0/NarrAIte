@@ -25,10 +25,10 @@ const startBatch = async (req, res) => {
     name = 'Batch Job'
   } = req.body
 
-  if (!process.env.OPENAI_API_KEY) {
+  if (!process.env.OPENROUTER_API_KEY) {
     return res.status(503).json({
       success: false,
-      message: 'AI API key not configured. Add OPENAI_API_KEY to server/.env'
+      message: 'AI API key not configured. Add OPENROUTER_API_KEY to server/.env'
     })
   }
 
